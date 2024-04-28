@@ -32,7 +32,7 @@ def START(message):
     s7 = types.InlineKeyboardButton(text="zlib_base32", callback_data='base32_zlib')
     s8  = types.InlineKeyboardButton(text="marshall_zlib_base16", callback_data='marshall_zlib_base16')
     s9 = types.InlineKeyboardButton(text="marshall_zlib_base64", callback_data='marshall_zlib_base64')    
-    pro = types.InlineKeyboardButton(text="The programmer ", url=f"https://t.me/Haxkx")     
+    pro = types.InlineKeyboardButton(text="Developer Channel", url=f"https://t.me/Haxkx")     
     Keyy = types.InlineKeyboardMarkup()
     Keyy.row_width = 1
     Keyy.add(s1, s2, s3, s4,s5,s6,s7,s8,s9,pro)
@@ -124,4 +124,3 @@ def encode(call, file_name):
 
 bot.polling(True)
 
-    
