@@ -36,7 +36,11 @@ def START(message):
     Keyy = types.InlineKeyboardMarkup()
     Keyy.row_width = 1
     Keyy.add(s1, s2, s3, s4,s5,s6,s7,s8,s9,pro)
-    bot.send_message(message.chat.id, text=f"Welcome to the @Haxkx encryption bot. Choose the type of encryption ", parse_mode="markdown", reply_markup=Keyy)
+    bot.send_message(message.chat.id, text=f"Welcome To Haxkx Encoder Bot this bot is made by Tanjiro 
+
+If you want same bot for your channel or with customisation then contact @toxic_tanji
+
+Thankyou ❣️. Choose the type of encryption ", parse_mode="markdown", reply_markup=Keyy)
 #-----------------------[encode]----------------------#    
 @bot.callback_query_handler(func=lambda call: True)
 def encode3(call):
