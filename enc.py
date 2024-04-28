@@ -32,11 +32,11 @@ def START(message):
     s7 = types.InlineKeyboardButton(text="zlib_base32", callback_data='base32_zlib')
     s8  = types.InlineKeyboardButton(text="marshall_zlib_base16", callback_data='marshall_zlib_base16')
     s9 = types.InlineKeyboardButton(text="marshall_zlib_base64", callback_data='marshall_zlib_base64')    
-    pro = types.InlineKeyboardButton(text="The programmer Channel ", url=f"https://t.me/Haxkx")     
+    pro = types.InlineKeyboardButton(text="The programmer ", url=f"https://t.me/Haxkx")     
     Keyy = types.InlineKeyboardMarkup()
     Keyy.row_width = 1
     Keyy.add(s1, s2, s3, s4,s5,s6,s7,s8,s9,pro)
-    bot.send_message(message.chat.id, text=f"Welcome to the Haxkx encryption bot @Haxkx. Choose the type of encryption ", parse_mode="markdown", reply_markup=Keyy)
+    bot.send_message(message.chat.id, text=f"Welcome to the @Haxkx encryption bot. Choose the type of encryption ", parse_mode="markdown", reply_markup=Keyy)
 #-----------------------[encode]----------------------#    
 @bot.callback_query_handler(func=lambda call: True)
 def encode3(call):
@@ -83,8 +83,7 @@ def encode(call, file_name):
 #-----------------------[base64]----------------------#        
     if call == "base64":
         s3 = b64(open(file_name, "r").read().encode('utf8'))[::-1]
-        return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('base64').b64decode(__[::-1]);exec((_)({s3}))")
+        return (f"_ = lambda __ : __import__('base64').b64decode(__[::-1]);exec((_)({s3}))")
 #-----------------------[lambda]----------------------#        
     elif call == "lambda":
         s3  = repr(zlib.compress(open(file_name, "r").read().encode('utf-8')))        
@@ -92,38 +91,31 @@ webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('base64').b64de
 #-----------------------[marshal]----------------------#                
     elif call == "marshal":
         s3= marshal.dumps(compile(open(file_name, "r").read(), 'module', 'exec'))
-        return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") import marshal\nexec(marshal.loads({s3}))")
+        return (f"import marshal\nexec(marshal.loads({s3}))")
 #-----------------------[zlib]----------------------#                
     elif call == "zlib2":
         s3 = str(base64.b64encode(zlib.compress(marshal.dumps(compile(open(file_name, "r").read(), "ru", 'exec')))))
-        return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") import base64\nimport zlib\nimport marshal\nexec(marshal.loads(zlib.decompress(base64.b64decode({s3}))))")
+        return (f"import base64\nimport zlib\nimport marshal\nexec(marshal.loads(zlib.decompress(base64.b64decode({s3}))))")
 #-----------------------[zlib_base16]----------------------#                
     elif call =="zlib_base16":
     	s3 = b16(zlb(open(file_name, "r").read().encode('utf8')))[::-1]
-    	return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('zlib').decompress(__import__('base64').b16decode(__[::-1]));exec((_)({s3}))")
+    	return (f"_ = lambda __ : __import__('zlib').decompress(__import__('base64').b16decode(__[::-1]));exec((_)({s3}))")
 #-----------------------[base32_zlib]]----------------------#            	
     elif call =="base32_zlib":
     	s3 = b32(zlb(open(file_name, "r").read().encode('utf8')))[::-1]
-    	return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('zlib').decompress(__import__('base64').b32decode(__[::-1])); exec((_)({s3}))")
+    	return (f"_ = lambda __ : __import__('zlib').decompress(__import__('base64').b32decode(__[::-1])); exec((_)({s3}))")
 #-----------------------[marshall_zlib_base16]----------------------#            	
     elif call == "marshall_zlib_base16":
     	s3 = b16(zlb(mar(open(file_name, "r").read().encode('utf8'))))[::-1]
-    	return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b16decode(__[::-1])));exec((_)({s3}))")
+    	return (f"_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b16decode(__[::-1])));exec((_)({s3}))")
 #-----------------------[marshall_zlib_base64]----------------------#            	
     elif call =="marshall_zlib_base64":    	    	 
     	    	 s3 = b64(zlb(mar(open(file_name, "r").read().encode('utf8'))))[::-1]
-    	    	 return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b64decode(__[::-1])));exec((_)({s3}))")
+    	    	 return (f"_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b64decode(__[::-1])));exec((_)({s3}))")
 #-----------------------[marshal_zlib]----------------------#            	    	 
     elif call =="marshal_zlib":
     	    	s3 = zlb(mar(open(file_name, "r").read().encode('utf8')))[::-1]
-    	    	return (f"import webbrowser
-webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__[::-1]));exec((_)({s3}))")
+    	    	return (f"_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__[::-1]));exec((_)({s3}))")
 #-----------------------[cpython]----------------------#            	    	
     	    	
     
@@ -132,3 +124,4 @@ webbrowser.open("https://t.me/haxkx") _ = lambda __ : __import__('marshal').load
 
 bot.polling(True)
 
+    
