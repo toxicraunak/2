@@ -1,5 +1,5 @@
-mechanize==0.4.6
-requests==2.26.0
-faker==9.13.3
-uuid==1.30
-user_agent==0.1.11
+mechanize
+requests
+faker
+uuid
+user_agent
