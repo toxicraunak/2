@@ -1,3 +1,15 @@
-websocket
+certifi==2024.2.2
+chardet==4.0.0
+charset-normalizer==3.3.2
+idna==3.3
+numpy==1.22.3
+packaging==23.0
+pyfiglet==0.8.post1
+pyparsing==3.0.7
+python-dateutil==2.8.2
+pyTelegramBotAPI==4.7.3
+requests==2.26.0
+six==1.16.0
+urllib3==1.26.8
+websocket-client==1.2.1
 requests
-rich
